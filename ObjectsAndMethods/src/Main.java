@@ -1,8 +1,9 @@
 public class Main {
 
     public static void main(String[] args) {
-        Basket basket = new Basket();
-        basket.add("Milk", 40);
-        basket.print("Milk");
+        Basket pavel = new Basket();
+        pavel.add("Milk", 40, 1,0.5);
+        pavel.add("Cheese", 100, 2, 0.4);
+        pavel.print("Корзина Павла:");
     }
 }
