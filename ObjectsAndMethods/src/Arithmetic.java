@@ -1,67 +1,43 @@
-import java.util.Scanner;
 public class Arithmetic {
     private int value1;
     private int value2;
 
-    public Arithmetic (int number1, int number2) {
-        value1 = number1;
-        value2 = number2;
+    public Arithmetic(int number1, int number2) {
+        this.value1 = number1;
+        this.value2 = number2;
     }
 
-    public static void main(String[] args) {
-        Arithmetic pavel = new Arithmetic(0,0);
-        pavel.summa();
-        System.out.println();
-        pavel.proizvedenie();
-        System.out.println();
-        pavel.maximum();
-        System.out.println();
-        pavel.minimum();
-    }
-
-    public void summa () {
-        System.out.println("Введите первое число:");
-        int number1 = new Scanner(System.in).nextInt();
-        System.out.println("Введите второе число:");
-        int number2 = new Scanner(System.in).nextInt();
-        int result = number1 + number2;
+    public int summa() {
+        int result = value1 + value2;
         System.out.println("Сумма чисел равна: " + result);
+        return result;
     }
 
-    public void proizvedenie () {
-        System.out.println("Введите первое число:");
-        int number1 = new Scanner(System.in).nextInt();
-        System.out.println("Введите второе число:");
-        int number2 = new Scanner(System.in).nextInt();
-        int result = number1 * number2;
+    public int multiplication() {
+        int result = value1 * value2;
         System.out.println("Произведение чисел равно: " + result);
+        return result;
     }
 
-    public void maximum () {
-        System.out.println("Введите первое число:");
-        int number1 = new Scanner(System.in).nextInt();
-        System.out.println("Введите второе число:");
-        int number2 = new Scanner(System.in).nextInt();
-        if (number1 > number2) {
-            System.out.println("Максимальное число: " + number1);
-        } else if (number1 < number2) {
-            System.out.println("Максимальное число: " + number2);
-        } else {
-            System.out.println("Введенно неверное значение");
+    public int maximum() {
+        if (value1 > value2) {
+            System.out.println("Максимальное число: " + value1);
+            return value1;
+        } else if (value1 < value2) {
+            System.out.println("Максимальное число: " + value2);
+            return value2;
         }
+        return 0;
     }
 
-    public void minimum () {
-        System.out.println("Введите первое число:");
-        int number1 = new Scanner(System.in).nextInt();
-        System.out.println("Введите второе число:");
-        int number2 = new Scanner(System.in).nextInt();
-        if (number1 > number2) {
-            System.out.println("Минимальное число: " + number2);
-        } else if (number1 < number2) {
-            System.out.println("Минимальное число: " + number1);
-        } else {
-            System.out.println("Введенно неверное значение");
+    public int minimum() {
+        if (value1 > value2) {
+            System.out.println("Минимальное число: " + value2);
+            return value2;
+        } else if (value1 < value2) {
+            System.out.println("Минимальное число: " + value1);
+            return value1;
         }
+        return 0;
     }
 }
