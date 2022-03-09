@@ -15,7 +15,6 @@ public class Printer {
     public void append (String text, String name, int pages) {
         queue = queue + "\n" + name + ": " + text + " - " + pages + " стр. ";
         totalPendingPages = totalPendingPages + pages;
-        totalPrintedPages = totalPrintedPages + pages;
     }
 
     public void clear() {
@@ -30,6 +29,8 @@ public class Printer {
             System.out.println("Документов не обнаружено");
         } else {
             System.out.println(queue);
+            totalPrintedPages = totalPrintedPages + totalPendingPages;
+            clear();
         }
     }
 
