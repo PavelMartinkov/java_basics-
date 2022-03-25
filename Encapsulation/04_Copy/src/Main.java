@@ -1,19 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-        Dimensions dimensions = new Dimensions(3,5,7);
-        dimensions.setWidth(2);
-        dimensions.setHeight(4);
-        dimensions.setLength(6);
-        Cargo cargo = new Cargo(dimensions,4.4,"г.Москва, ул.Ленинская, д.17");
+        Dimensions dimensions = new Dimensions(3, 5, 7);
+        Dimensions a = dimensions.setWidth(2);
+        Dimensions b = dimensions.setLength(4);
+        Dimensions c = dimensions.setLength(6);
+        Cargo cargo = new Cargo(dimensions, 4.4, "г.Москва, ул.Ленинская, д.17");
         // some code
-
-        cargo.setDimensions(dimensions);
-        boolean a = cargo.getDimensions() == new Dimensions(2, 4, 6);
-        cargo.setWeight(4.4);
-        boolean b = cargo.getWeight() == 20.5;
-        cargo.setDeliveryAddress("г.Москва, ул.Ленинская, д.17");
-        boolean c = cargo.getDeliveryAddress() == "г.Минск, ул.Макаенка. д.24";
-        System.out.println(cargo);
+        Cargo a1 = cargo.setDimensions(new Dimensions(2, 4, 6));
+        Cargo b1 = cargo.setWeight(6.4);
+        Cargo c1 = cargo.setDeliveryAddress("г.Минск, ул.Макаенка, д.8");
         Dimensions copy = new Dimensions (
                 dimensions.getWidth(),
                 dimensions.getHeight(),
@@ -22,6 +17,6 @@ public class Main {
                 cargo.getDimensions(),
                 cargo.getWeight(),
                 cargo.getDeliveryAddress());
+        System.out.println(new Cargo(new Dimensions(2, 4, 6), 6.4, "г.Минск, ул.Макаенка, д.8"));
     }
 }
-
