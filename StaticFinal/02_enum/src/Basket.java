@@ -28,15 +28,6 @@ public class Basket {
         this.totalPrice = totalPrice;
     }
 
-    public Basket(String items, int totalPrice, int totalCountAllItemsInAllBasket, int countItemsInOneBasket) {
-        this();
-        this.items = this.items + items;
-        this.totalPrice = totalPrice;
-        this.totalCountAllItemsInAllBasket = totalCountAllItemsInAllBasket;
-        this.countItemsInOneBasket = countItemsInOneBasket;
-    }
-
-
     public static void increaseCountBasket(int countBasket) {
         Basket.countBasket = Basket.countBasket + countBasket;
     }
@@ -122,6 +113,7 @@ public class Basket {
         } else {
             System.out.println(items);
             System.out.println("Общее количество товаров: " + totalCountAllItemsInAllBasket + " шт.");
+            System.out.println("Общая цена: " + totalPrice + " RUB ");
         }
     }
 }
