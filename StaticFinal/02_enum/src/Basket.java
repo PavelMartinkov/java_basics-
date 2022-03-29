@@ -1,6 +1,6 @@
 public class Basket {
 
-    private static int countBasket = 0;
+    private static int totalCountBasket = 0;
     private static int totalPrice = 0;
     private static int countItemsInOneBasket = 0;
     private static int totalCountAllItemsInAllBasket = 0;
@@ -10,7 +10,7 @@ public class Basket {
 
 
     public Basket() {
-        increaseCountBasket(0);
+        increaseTotalCountBasket(0);
         increaseTotalPrice(0);
         increaseTotalCountAllItemsInAllBasket(0);
         items = "Список товаров:";
@@ -28,12 +28,12 @@ public class Basket {
         this.totalPrice = totalPrice;
     }
 
-    public static void increaseCountBasket(int countBasket) {
-        Basket.countBasket = Basket.countBasket + countBasket;
+    public static void increaseTotalCountBasket(int countBasket) {
+        Basket.totalCountBasket = Basket.totalCountBasket + countBasket;
     }
 
-    public static int getCountBasket() {
-        return countBasket;
+    public static int getTotalCountBasket() {
+        return totalCountBasket;
     }
 
     public static void increaseTotalPrice(int price) {
@@ -58,7 +58,7 @@ public class Basket {
     }
 
     public static void averagePriceBasket() {
-        int averagePriceBasket = totalPrice / countBasket;
+        int averagePriceBasket = totalPrice / totalCountBasket;
         return;
     }
 
@@ -84,8 +84,11 @@ public class Basket {
 
         items = items + "\n" + name + " - " +
                 price + " RUB - " + weight + " kg ";
+        totalCountBasket = totalCountBasket + countBasket;
         totalPrice = totalPrice + countBasket * price;
+        totalCountAllItemsInAllBasket = totalCountAllItemsInAllBasket + countBasket;
         totalWeight = totalWeight + weight;
+
     }
 
     public void clear() {
@@ -109,11 +112,11 @@ public class Basket {
             System.out.println("Корзина пуста");
         } else {
             System.out.println(items);
-            System.out.println("Общее количество корзин: " + countBasket + " шт.");
+            System.out.println("Общее количество корзин: " + totalCountBasket + " шт.");
             System.out.println("Общее количество товаров: " + totalCountAllItemsInAllBasket + " шт.");
             System.out.println("Общая цена: " + totalPrice + " RUB ");
             System.out.println("Средняя цена товара во всех корзинах: " + totalPrice / totalCountAllItemsInAllBasket + " RUB ");
-            System.out.println("Средняя стоимость корзины: " + totalPrice / countBasket + " RUB ");
+            System.out.println("Средняя стоимость корзины: " + totalPrice / totalCountBasket + " RUB ");
         }
     }
 }
