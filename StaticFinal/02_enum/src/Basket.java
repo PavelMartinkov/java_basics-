@@ -67,13 +67,13 @@ public class Basket {
         add(name, price);
     }
 
-    public void add(String name, int price, double weight, int countBasket) {
+    public void add(String name, int price, double weight, int countNewItem) {
         boolean error = false;
         if (contains(name)) {
             error = true;
         }
 
-        if (totalPrice + countBasket * price >= limit) {
+        if (totalPrice + countNewItem * price >= limit) {
             error = true;
         }
 
@@ -84,9 +84,9 @@ public class Basket {
 
         items = items + "\n" + name + " - " +
                 price + " RUB - " + weight + " kg ";
-        totalCountBasket = totalCountBasket + countBasket;
-        totalPrice = totalPrice + countBasket * price;
-        totalCountAllItemsInAllBasket = totalCountAllItemsInAllBasket + countBasket;
+        totalCountBasket = totalCountBasket + countNewItem;
+        totalPrice = totalPrice + countNewItem * price;
+        totalCountAllItemsInAllBasket = totalCountAllItemsInAllBasket + countNewItem;
         totalWeight = totalWeight + weight;
 
     }
