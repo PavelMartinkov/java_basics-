@@ -20,14 +20,14 @@ public class CompanyClientTest {
     @DisplayName("Метод put")
     void put() {
         companyClient.put(1.0);
-        assertEquals(1.0, companyClient.getAmount(), DELTA, notExpectedSumMessage);
+        assertEquals(1.0, companyClient.getAmountOfMoney(), DELTA, notExpectedSumMessage);
     }
 
     @Test
     @DisplayName("Метод put, попытка вызвать метод с отрицательной суммой (баланс не должен измениться)")
     void putNegativeAmount() {
         companyClient.put(-1.0);
-        assertEquals(0.0, companyClient.getAmount(), DELTA, notExpectedSumMessage);
+        assertEquals(0.0, companyClient.getAmountOfMoney(), DELTA, notExpectedSumMessage);
     }
 
     @Test
@@ -35,7 +35,7 @@ public class CompanyClientTest {
     void take() {
         companyClient.put(2.0);
         companyClient.take(1.0);
-        assertEquals(0.99, companyClient.getAmount(), DELTA, notExpectedSumMessage);
+        assertEquals(0.99, companyClient.getAmountOfMoney(), DELTA, notExpectedSumMessage);
     }
 
     @Test
@@ -43,6 +43,6 @@ public class CompanyClientTest {
     void takeTooMuchMoney() {
         companyClient.put(1.0);
         companyClient.take(3.0);
-        assertEquals(1.0, companyClient.getAmount(), DELTA, notExpectedSumMessage);
+        assertEquals(1.0, companyClient.getAmountOfMoney(), DELTA, notExpectedSumMessage);
     }
 }

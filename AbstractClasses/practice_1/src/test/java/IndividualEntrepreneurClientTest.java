@@ -20,28 +20,28 @@ public class IndividualEntrepreneurClientTest {
     @DisplayName("Метод put, попытка положить сумму менее 1000")
     void putLess1000() {
         individualEntrepreneurClient.put(500.0);
-        assertEquals(495.0, individualEntrepreneurClient.getAmount(), DELTA, notExpectedSumMessage);
+        assertEquals(495.0, individualEntrepreneurClient.getAmountOfMoney(), DELTA, notExpectedSumMessage);
     }
 
     @Test
     @DisplayName("Метод put, попытка положить 1000")
     void put1000() {
         individualEntrepreneurClient.put(1000.0);
-        assertEquals(995.0, individualEntrepreneurClient.getAmount(), DELTA, notExpectedSumMessage);
+        assertEquals(995.0, individualEntrepreneurClient.getAmountOfMoney(), DELTA, notExpectedSumMessage);
     }
 
     @Test
     @DisplayName("Метод put, попытка положить сумму более 1000")
     void putMore1000() {
         individualEntrepreneurClient.put(2000.0);
-        assertEquals(1990.0, individualEntrepreneurClient.getAmount(), DELTA, notExpectedSumMessage);
+        assertEquals(1990.0, individualEntrepreneurClient.getAmountOfMoney(), DELTA, notExpectedSumMessage);
     }
 
     @Test
     @DisplayName("Метод put, попытка вызвать метод с отрицательной суммой (баланс не должен измениться)")
     void putNegativeAmount() {
         individualEntrepreneurClient.put(-1.0);
-        assertEquals(0.0, individualEntrepreneurClient.getAmount(), DELTA, notExpectedSumMessage);
+        assertEquals(0.0, individualEntrepreneurClient.getAmountOfMoney(), DELTA, notExpectedSumMessage);
     }
 
     @Test
@@ -49,7 +49,7 @@ public class IndividualEntrepreneurClientTest {
     void take() {
         individualEntrepreneurClient.put(500.0); //положилось 495
         individualEntrepreneurClient.take(1.0);
-        assertEquals(494.0, individualEntrepreneurClient.getAmount(), DELTA, notExpectedSumMessage);
+        assertEquals(494.0, individualEntrepreneurClient.getAmountOfMoney(), DELTA, notExpectedSumMessage);
     }
 
     @Test
@@ -57,6 +57,6 @@ public class IndividualEntrepreneurClientTest {
     void takeTooMuchMoney() {
         individualEntrepreneurClient.put(500.0); //положилось 495
         individualEntrepreneurClient.take(496.0);
-        assertEquals(495.0, individualEntrepreneurClient.getAmount(), DELTA, notExpectedSumMessage);
+        assertEquals(495.0, individualEntrepreneurClient.getAmountOfMoney(), DELTA, notExpectedSumMessage);
     }
 }

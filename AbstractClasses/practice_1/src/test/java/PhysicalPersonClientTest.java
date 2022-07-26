@@ -20,14 +20,14 @@ public class PhysicalPersonClientTest {
     @DisplayName("Метод put")
     void put() {
         physicalPersonClient.put(1.0);
-        assertEquals(1.0, physicalPersonClient.getAmount(), DELTA, notExpectedSumMessage);
+        assertEquals(1.0, physicalPersonClient.getAmountOfMoney(), DELTA, notExpectedSumMessage);
     }
 
     @Test
     @DisplayName("Метод put, попытка вызвать метод с отрицательной суммой (баланс не должен измениться)")
     void putNegativeAmount() {
         physicalPersonClient.put(-1.0);
-        assertEquals(0.0, physicalPersonClient.getAmount(), DELTA, notExpectedSumMessage);
+        assertEquals(0.0, physicalPersonClient.getAmountOfMoney(), DELTA, notExpectedSumMessage);
     }
 
 
@@ -36,7 +36,7 @@ public class PhysicalPersonClientTest {
     void take() {
         physicalPersonClient.put(2.0);
         physicalPersonClient.take(1.0);
-        assertEquals(1.0, physicalPersonClient.getAmount(), DELTA, notExpectedSumMessage);
+        assertEquals(1.0, physicalPersonClient.getAmountOfMoney(), DELTA, notExpectedSumMessage);
     }
 
     @Test
@@ -44,6 +44,6 @@ public class PhysicalPersonClientTest {
     void takeTooMuchMoney() {
         physicalPersonClient.put(2.0);
         physicalPersonClient.take(3.0);
-        assertEquals(2.0, physicalPersonClient.getAmount(), DELTA, notExpectedSumMessage);
+        assertEquals(2.0, physicalPersonClient.getAmountOfMoney(), DELTA, notExpectedSumMessage);
     }
 }
