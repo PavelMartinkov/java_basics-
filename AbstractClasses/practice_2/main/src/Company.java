@@ -1,39 +1,30 @@
 import java.util.*;
 
-public class Company {
+public class Company{
 
     public double income;
 
+    private List<Employee> staff;
 
-    ArrayList<Employee> mainList = new ArrayList<>();
-
-
-    public Company(double income) {
-        this.income = income;
+    public Company() {
+        staff = new ArrayList<>();
+        income++;
     }
 
-    public boolean hire(Employee employee) {
-        if (mainList.contains(employee)) {
-            mainList.add(employee);
-            System.out.println("Добро пожаловать в коллектив: " + employee);
-        }
-        return false;
+    public void hire(Employee employee) {
+        staff.add(employee);
+        System.out.println("Добавлен один сотрудник: " + employee);
     }
 
-    public boolean hireAll(Collection<Employee> employees) {
-        ArrayList<Employee> employeeArrayList = new ArrayList<>();
-        if (employeeArrayList.contains(employees)) {
-            employeeArrayList.add((Employee) employees);
-        }
-        return false;
+    public void hireAll(Collection<Employee> employees) {
+        staff.addAll(employees);
+        System.out.println("Список сотрудников: ");
+        System.out.println(employees);
     }
 
-    public boolean fire(Employee employee) {
-        if (mainList.contains(employee)) {
-            mainList.remove(employee);
-            System.out.println("Данный сотрудник уволен: " + employee);
-        }
-        return false;
+    public void fire(Employee employee) {
+        staff.remove(employee);
+        System.out.println("Данный(ые) сотрудник(и) уволен(ы): " + employee);
     }
 
     public double getIncome() {
@@ -41,21 +32,19 @@ public class Company {
     }
 
     public List<Employee> getTopSalaryStaff(int count) {
-        ArrayList<Employee> arrayList = new ArrayList<>(mainList);
-        if (mainList.contains(count)) {
-            Collections.sort(arrayList, Collections.reverseOrder());
+        ArrayList<Employee> arrayList = new ArrayList<>(staff);
+        if (staff.contains(count)) {
+            Collections.sort(staff, Collections.reverseOrder());
             System.out.println("Список по убывнию заработной платы: ");
         }
         return arrayList;
-    }
+        }
 
     public List<Employee> getLowestSalaryStaff(int count) {
-        ArrayList<Employee> arrayList1 = new ArrayList<>(mainList);
-        if (mainList.contains(count)) {
+        ArrayList<Employee> arrayList1 = new ArrayList<>();
+        if (staff.contains(count)) {
             System.out.println("Список по возрастанию заработной платы: ");
         }
-        return arrayList1;
+        return staff;
     }
-
-
 }

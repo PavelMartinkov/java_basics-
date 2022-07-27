@@ -1,24 +1,25 @@
 public class TopManager implements Employee {
 
-    private double topManagerSalary;
-    private double income;
+    private double fixTopManagerSalary = 50_000;
     private final double INCOME_COMPANY = 10_000_000;
     private final double BONUS_TOP_MANAGER = 1.5;
-    private int countPeople;
+    private double moneyForCompanyByTopManager;
 
-    public TopManager(int countPeople) {
-        this.countPeople = countPeople;
-    }
 
-    public TopManager(double income) {
-        this.income = income;
+    public TopManager(double moneyForCompanyByTopManager) {
+        this.moneyForCompanyByTopManager = moneyForCompanyByTopManager;
     }
 
     @Override
     public double getMonthSalary() {
-        if (income >= INCOME_COMPANY) {
-            topManagerSalary += topManagerSalary * BONUS_TOP_MANAGER;
+        if (moneyForCompanyByTopManager >= INCOME_COMPANY) {
+            fixTopManagerSalary += fixTopManagerSalary * BONUS_TOP_MANAGER;
         }
-        return topManagerSalary;
+        return fixTopManagerSalary;
+    }
+
+    @Override
+    public String toString() {
+        return "TopManager {" + "topManagerSalary = " + getMonthSalary() + " руб." +'}';
     }
 }
