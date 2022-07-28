@@ -1,4 +1,4 @@
-public class TopManager implements Employee {
+public class TopManager implements Employee, Comparable {
 
     private double fixTopManagerSalary = 50_000;
     private final double INCOME_COMPANY = 10_000_000;
@@ -20,6 +20,11 @@ public class TopManager implements Employee {
 
     @Override
     public String toString() {
-        return "TopManager {" + "topManagerSalary = " + getMonthSalary() + " руб." +'}';
+        return "TopManager {" + "topManagerSalary = " + getMonthSalary() + " руб." + '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }

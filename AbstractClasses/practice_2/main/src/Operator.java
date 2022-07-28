@@ -1,4 +1,4 @@
-public class Operator implements Employee {
+public class Operator implements Employee, Comparable {
 
     private final double FIX_OPERATOR_SALARY = 50_000;
     private double moneyForCompanyByOperator;
@@ -16,5 +16,10 @@ public class Operator implements Employee {
     @Override
     public String toString() {
         return "Operator {" + "operatorSalary = " + getMonthSalary() + " руб." + '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }

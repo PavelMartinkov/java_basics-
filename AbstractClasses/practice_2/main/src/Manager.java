@@ -1,4 +1,4 @@
-public class Manager implements Employee{
+public class Manager implements Employee, Comparable{
 
     private double fixManagerSalary = 50_000;
     private double moneyForCompanyByManager;
@@ -21,5 +21,10 @@ public class Manager implements Employee{
     @Override
     public String toString() {
         return "Manager {" + "managerSalary = " + getMonthSalary() + " руб." + '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }

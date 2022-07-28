@@ -27,24 +27,32 @@ public class Company{
         System.out.println("Данный(ые) сотрудник(и) уволен(ы): " + employee);
     }
 
+    public void fireAll(Collection<Employee> employees) {
+        staff.remove(employees);
+        System.out.println("Список уволенных сотрудников: ");
+        System.out.println(employees);
+    }
+
     public double getIncome() {
         return income;
     }
 
     public List<Employee> getTopSalaryStaff(int count) {
-        ArrayList<Employee> arrayList = new ArrayList<>(staff);
-        if (staff.contains(count)) {
-            Collections.sort(staff, Collections.reverseOrder());
-            System.out.println("Список по убывнию заработной платы: ");
+
+        ArrayList <Employee> topSalaryStaff = new ArrayList<>();
+        for (int i = 0; i < count; i++) {
+            topSalaryStaff.add(staff.get(i));
         }
-        return arrayList;
-        }
+        Collections.sort(topSalaryStaff, Collections.reverseOrder());
+        return topSalaryStaff;
+    }
 
     public List<Employee> getLowestSalaryStaff(int count) {
-        ArrayList<Employee> arrayList1 = new ArrayList<>();
-        if (staff.contains(count)) {
-            System.out.println("Список по возрастанию заработной платы: ");
+
+        ArrayList <Employee> lowSalaryStaff = new ArrayList<>();
+        for (int i = 0; i < count; i++) {
+            lowSalaryStaff.add(staff.get(i));
         }
-        return staff;
+        return lowSalaryStaff;
     }
 }

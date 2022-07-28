@@ -21,12 +21,38 @@ public class Main {
         }
 
         company.hireAll(employees);
+        System.out.println();
 
-        System.out.println(company.getTopSalaryStaff(15));
-        System.out.println(company.getLowestSalaryStaff(30));
-//        company.fire()
-        System.out.println(company.getTopSalaryStaff(15));
-        System.out.println(company.getLowestSalaryStaff(30));
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Самые высокие зарплаты сотрудников: " + company.getTopSalaryStaff(10).get(i));
+        }
+        System.out.println();
+        for (int i = 0; i < 30; i++) {
+            System.out.println("Самые низкие зарплаты сотрудников: " + company.getLowestSalaryStaff(30).get(i));
+        }
+        System.out.println();
 
+        for (int i = 180; i > 90; i--) {
+            employees.remove(i);
+        }
+
+        for (int i = 80; i > 40; i--) {
+            employees.remove(i);
+        }
+
+        for (int i = 10; i > 5; i--) {
+            employees.remove(i);
+        }
+
+        company.fireAll(employees);
+        System.out.println();
+
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Самые высокие зарплаты сотрудников: " + company.getTopSalaryStaff(10).get(i));
+        }
+        System.out.println();
+        for (int i = 0; i < 30; i++) {
+            System.out.println("Самые низкие зарплаты сотрудников: " + company.getLowestSalaryStaff(30).get(i));
+        }
     }
 }
