@@ -1,5 +1,8 @@
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.Marker;
+import org.apache.logging.log4j.MarkerManager;
+
 import java.util.Scanner;
 
 public class Main {
@@ -11,7 +14,10 @@ public class Main {
             COMMAND_EXAMPLES;
     private static final String helpText = "Command examples:\n" + COMMAND_EXAMPLES;
 
-    private static Logger logger = LogManager.getLogger();
+    private static Logger logger = LogManager.getLogger(Main.class);
+
+    private static final Marker INFORMATION_MARKER = MarkerManager.getMarker("INFORMATION_MARKER");
+    private static final Marker ERRORS_MARKER = MarkerManager.getMarker("ERRORS_MARKER");
 
     public static void main(String[] args) {
 
@@ -25,20 +31,20 @@ public class Main {
 
                 if (tokens[0].equals("add")) {
                     executor.addCustomer(tokens[1]);
-                    logger.info("Добавлен клиент: " + command.substring(4));
+                    logger.info(INFORMATION_MARKER, "Добавлен клиент: " + command.substring(4));
                 } else if (tokens[0].equals("list")) {
                     executor.listCustomers();
-                    logger.info("Список клиентов(вывод в консоль): ");
+//                    logger.info("Список клиентов: ");
                 } else if (tokens[0].equals("remove")) {
                     executor.removeCustomer(tokens[1]);
-                    logger.info("Данный клиент удален: " + command.substring(7));
+                    logger.info(INFORMATION_MARKER, "Данный клиент удален: " + command.substring(7));
                 } else if (tokens[0].equals("count")) {
-                    logger.info("There are " + executor.getCount() + " customers");
+                    logger.info(INFORMATION_MARKER, "There are " + executor.getCount() + " customers");
                 } else if (tokens[0].equals("help")) {
-                    logger.info(helpText);
+                    logger.info(INFORMATION_MARKER, helpText);
                 } else {
                     System.out.println(COMMAND_ERROR);
-                    logger.error("Возникла ошибка" , new IllegalArgumentException("Неверный формат"));
+                    logger.error(ERRORS_MARKER,"Возникла ошибка" , new IllegalArgumentException("Неверный формат"));
                 }
             } catch (IllegalArgumentException ex) {
                 ex.printStackTrace();
