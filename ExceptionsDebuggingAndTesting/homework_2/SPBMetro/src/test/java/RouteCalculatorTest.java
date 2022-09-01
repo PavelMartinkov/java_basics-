@@ -1,6 +1,9 @@
 import core.Line;
 import core.Station;
 import junit.framework.TestCase;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +16,7 @@ public class RouteCalculatorTest extends TestCase {
     List<Station> oneConnection = new ArrayList<>();
     List<Station> twoConnection = new ArrayList<>();
 
-    @Override
+    @Before
     protected void setUp() throws Exception {
 
         Line line1 = new Line(1,"Первая");
@@ -34,16 +37,16 @@ public class RouteCalculatorTest extends TestCase {
         line3.addStation(station5);
         line3.addStation(station6);
 
-        stationIndex.addLine(line1);
-        stationIndex.addLine(line2);
-        stationIndex.addLine(line3);
-
         stationIndex.addStation(station1);
         stationIndex.addStation(station2);
         stationIndex.addStation(station3);
         stationIndex.addStation(station4);
         stationIndex.addStation(station5);
         stationIndex.addStation(station6);
+
+        stationIndex.addLine(line1);
+        stationIndex.addLine(line2);
+        stationIndex.addLine(line3);
 
         route.add(station1);
         route.add(station2);
@@ -54,50 +57,31 @@ public class RouteCalculatorTest extends TestCase {
 
         oneConnection.add(station2);
         oneConnection.add(station3);
+        stationIndex.addConnection(oneConnection);
 
-        twoConnection.add(station2);
-        twoConnection.add(station3);
         twoConnection.add(station4);
         twoConnection.add(station5);
-
-//        stationIndex.addConnection(route);
-//        stationIndex.addConnection(oneConnection);
-//        stationIndex.addConnection(twoConnection);
-
-    }
-
-    public void testGetShortestRouteWithoutConnection() {
-        stationIndex.addConnection(route);
-        List<Station> actual = routeCalculator.getShortestRoute(route.get(0), route.get(route.size() - 1));
-        List<Station> expected = route.subList(0, route.size());
-        assertEquals(expected,actual);
-    }
-    public void testGetShortestRouteWithOneConnection() {
-        stationIndex.addConnection(oneConnection);
-        List<Station> actual = routeCalculator.getShortestRoute(stationIndex.getStation("Арбузная"), stationIndex.getStation("Морковная"));
-        List<Station> expected = route.subList(0, route.size());
-        assertEquals(expected,actual);
-    }
-
-    public void testGetShortestRouteWithTwoConnection() {
         stationIndex.addConnection(twoConnection);
-        List<Station> actual = routeCalculator.getShortestRoute(stationIndex.getStation("Яблочная"), stationIndex.getStation("Московская"));
+
+
+    }
+    @Test
+    public void testGetShortestRoute() {
+        stationIndex.addConnection(route);
+        List<Station> actual = routeCalculator.getShortestRoute(stationIndex.getStation("Петровская"), stationIndex.getStation("Минская"));
         List<Station> expected = route.subList(0, route.size());
         assertEquals(expected,actual);
     }
 
-
-
+        @Test
         public void testCalculateDuration() {
         double actual = RouteCalculator.calculateDuration(route);
         double expected = 14.5;
-
         assertEquals(expected,actual);
     }
 
-
-    @Override
+    @After
     protected void tearDown() throws Exception {
-
+        System.out.println("Tests finished");
     }
 }
