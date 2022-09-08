@@ -16,13 +16,15 @@ public class RouteCalculator {
     }
 
     public List<Station> getShortestRoute(Station from, Station to) {
-        List<Station> route = getRouteOnTheLine(from, to);
+        List<Station> route;
+
+        route = getRouteOnTheLine(from, to);
         if (route != null) {
             return route;
         }
 
         route = getRouteWithOneConnection(from, to);
-        if (route != null) {
+        if (route.size() != 0 && route != null) {
             return route;
         }
 
@@ -48,6 +50,7 @@ public class RouteCalculator {
         if (!from.getLine().equals(to.getLine())) {
             return null;
         }
+
         List<Station> route = new ArrayList<>();
         List<Station> stations = from.getLine().getStations();
         int direction = 0;
@@ -124,7 +127,6 @@ public class RouteCalculator {
         }
 
         ArrayList<Station> route = new ArrayList<>();
-
         List<Station> fromLineStations = from.getLine().getStations();
         List<Station> toLineStations = to.getLine().getStations();
 
@@ -145,7 +147,6 @@ public class RouteCalculator {
                 }
             }
         }
-
         return route;
     }
 }
