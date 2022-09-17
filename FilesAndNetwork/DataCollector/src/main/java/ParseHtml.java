@@ -4,6 +4,7 @@ import org.jsoup.select.Elements;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ParseHtml {
@@ -22,25 +23,27 @@ public class ParseHtml {
     }
 
 
-    public static Elements getLines() {
+    public static List<String> getLines() {
         String htmlFile = parseFile(pathHtml);
         Document doc = Jsoup.parse(htmlFile);
-        System.out.println("Список линий московского метро:" + "\n");
+//        System.out.println("Список линий московского метро:" + "\n");
+        List<String> linesName = new ArrayList<>();
         Elements lines = doc.select(".js-metro-line");
         lines.forEach(line -> {
-            System.out.println(line.attr("data-line") + " " + line.text());
+            linesName.add(line.attr("data-line=") + line.text());
         });
-        return new Elements();
+        return linesName;
     }
 
-    public static Elements getStations() {
+    public static List<String> getStations() {
         String htmlFile = parseFile(pathHtml);
         Document doc = Jsoup.parse(htmlFile);
-        System.out.println("Список станций московского метро:" + "\n");
+//        System.out.println("Список станций московского метро:" + "\n");
+        List<String> stationsName = new ArrayList<>();
         Elements stations = doc.select(".js-metro-stations");
         stations.forEach(element -> {
-            System.out.println(element.attr("data-line") + " линия:" + " " + element.text());
+            stationsName.add(element.attr("data-line=") + element.text());
         });
-        return new Elements();
+        return stationsName;
     }
 }

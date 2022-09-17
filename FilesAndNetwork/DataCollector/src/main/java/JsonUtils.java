@@ -3,18 +3,21 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.io.PrintWriter;
+import java.lang.reflect.Array;
 import java.nio.file.FileVisitOption;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 
 public class JsonUtils {
 
     public static String pathJsonAndCsv = "archive/data/data/";
-    public static String pathFromPreviousProjectMapJson = "C:/Users/Asus/.ssh/java_basics/ExceptionsDebuggingAndTesting/homework_2/SPBMetro/src/main/resources/map.json";
-    public static String pathMapSpbJson = "data/mapSpb.json";
+//    public static String pathFromPreviousProjectMapJson = "C:/Users/Asus/.ssh/java_basics/ExceptionsDebuggingAndTesting/homework_2/SPBMetro/src/main/resources/map.json";
+//    public static String pathMapSpbJson = "data/mapSpb.json";
     public static String pathStationsJson = "data/stations.json";
+    public static String pathMapJson = "data/map.json";
 
     public static String getJsonFileFromAllFolders() {
         StringBuilder builder = new StringBuilder();
@@ -40,14 +43,53 @@ public class JsonUtils {
         return builder.toString();
     }
 
-    public static String writeJsonFile() {
+//    public static String writeJsonFile() {
+//        try {
+//            List<String> pathMetroSpb = Files.readAllLines(Paths.get(pathFromPreviousProjectMapJson));
+//            Files.write(Paths.get(pathMapSpbJson), (pathMetroSpb));
+//            List<String> lines = Files.readAllLines(Paths.get(pathMapSpbJson));
+//            for (int i = 0; i < lines.size(); i++) {
+//                System.out.println(lines.get(i));
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        return "";
+//    }
+
+    public static String createMapJson() {
         try {
-            List<String> pathMetroSpb = Files.readAllLines(Paths.get(pathFromPreviousProjectMapJson));
-            Files.write(Paths.get(pathMapSpbJson), (pathMetroSpb));
-            List<String> lines = Files.readAllLines(Paths.get(pathMapSpbJson));
-            for (int i = 0; i < lines.size(); i++) {
-                System.out.println(lines.get(i));
+            PrintWriter writer = new PrintWriter(pathMapJson);
+            JSONArray array = new JSONArray();
+
+            LinkedHashMap<String, List> item = new LinkedHashMap<>();
+
+            for (int i = 0; i < ParseHtml.getLines().size(); i++) {
+                for (int j = ParseHtml.getStations().size() - 1; j > 0; j--) {
+//                    if (ParseHtml.getStations().equals(ParseHtml.getLines())) {
+//                    String regex = "[,*]";
+                        item.put(ParseHtml.getLines().get(i), ParseHtml.getStations());
+//                    }
+                }
             }
+//            for (int j = 0; j < ParseHtml.getStations().size(); j++) {
+//                if (ParseHtml.getStation)
+//            }
+
+//            JSONArray array = new JSONArray();
+//            array.add(item);
+
+            JSONObject json = new JSONObject();
+            json.put("stations", item);
+
+            ObjectMapper mapper = new ObjectMapper();
+            String format = mapper
+                    .writerWithDefaultPrettyPrinter()
+                    .writeValueAsString(json);
+
+            writer.write(format);
+            writer.flush();
+            writer.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
