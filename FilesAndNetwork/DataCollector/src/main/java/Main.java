@@ -1,6 +1,20 @@
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+
+    public static String parseFile(String path) {
+        StringBuilder builder = new StringBuilder();
+        try {
+            List<String> lines = Files.readAllLines(Paths.get(path));
+            lines.forEach(line -> builder.append(line + "\n"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return builder.toString();
+    }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -14,9 +28,9 @@ public class Main {
         while (true) {
             int input = scanner.nextInt();
             if (input == 1) {
-                System.out.println(ParseHtml.getLines());
+                System.out.println(Line.getLinesFromHtml());
             } else if (input == 2) {
-                System.out.println(ParseHtml.getStations());
+                System.out.println(Station.getStationsFromHtml());
             } else if (input == 3) {
                 System.out.println(JsonUtils.getJsonFileFromAllFolders());
             } else if (input == 4) {

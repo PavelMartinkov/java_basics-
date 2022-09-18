@@ -3,7 +3,6 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.io.PrintWriter;
-import java.lang.reflect.Array;
 import java.nio.file.FileVisitOption;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -14,10 +13,14 @@ import java.util.List;
 public class JsonUtils {
 
     public static String pathJsonAndCsv = "archive/data/data/";
-//    public static String pathFromPreviousProjectMapJson = "C:/Users/Asus/.ssh/java_basics/ExceptionsDebuggingAndTesting/homework_2/SPBMetro/src/main/resources/map.json";
-//    public static String pathMapSpbJson = "data/mapSpb.json";
     public static String pathStationsJson = "data/stations.json";
     public static String pathMapJson = "data/map.json";
+
+//    public static List<Station> stations;
+//    public static List<Line> lines;
+
+//    public static Station station;
+//    public static Line line;
 
     public static String getJsonFileFromAllFolders() {
         StringBuilder builder = new StringBuilder();
@@ -43,44 +46,47 @@ public class JsonUtils {
         return builder.toString();
     }
 
-//    public static String writeJsonFile() {
-//        try {
-//            List<String> pathMetroSpb = Files.readAllLines(Paths.get(pathFromPreviousProjectMapJson));
-//            Files.write(Paths.get(pathMapSpbJson), (pathMetroSpb));
-//            List<String> lines = Files.readAllLines(Paths.get(pathMapSpbJson));
-//            for (int i = 0; i < lines.size(); i++) {
-//                System.out.println(lines.get(i));
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        return "";
-//    }
-
     public static String createMapJson() {
         try {
             PrintWriter writer = new PrintWriter(pathMapJson);
+
             JSONArray array = new JSONArray();
 
             LinkedHashMap<String, List> item = new LinkedHashMap<>();
 
-            for (int i = 0; i < ParseHtml.getLines().size(); i++) {
-                for (int j = ParseHtml.getStations().size() - 1; j > 0; j--) {
-//                    if (ParseHtml.getStations().equals(ParseHtml.getLines())) {
-//                    String regex = "[,*]";
-                        item.put(ParseHtml.getLines().get(i), ParseHtml.getStations());
-//                    }
-                }
-            }
-//            for (int j = 0; j < ParseHtml.getStations().size(); j++) {
-//                if (ParseHtml.getStation)
-//            }
 
-//            JSONArray array = new JSONArray();
+
+            for (int i = 0; i < Station.line.size(); i ++) {
+                for (int j = 0; j < Line.station.size(); j++) {
+
+                    System.out.println(Line.station.get(j).getLine());
+                    System.out.println(Station.line.get(i).getNumber());
+
+                    if (Line.station.get(j).getLine().equals(Station.line.get(i).getNumber())) {
+                            array.add(Line.station.get(j).getName());
+                        }
+//                        item.put(Line.getLinesFromHtml().get(i),Station.getStationsFromHtml());
+                    }
+
+                }
+
 //            array.add(item);
 
+
+//            for (int i = 0; i < Lines.getLinesFromHtml().size(); i++) {
+//                for (int j = 0; j < Stations.getStationsFromHtml().size(); j++) {
+//                    if(stations.getLines().get(j).equals(lines.getNumber())) {
+//                        item.put(String.valueOf(lines.getNumber()), stations.getLines());
+////                    item.put(Lines.getLinesFromHtml().get(i), Collections.singletonList(Stations.getStationsFromHtml().get(j)));
+//                }
+//                    }
+//                }
+//            array.add(item);
+
+
             JSONObject json = new JSONObject();
-            json.put("stations", item);
+                json.put("stations", array);
+
 
             ObjectMapper mapper = new ObjectMapper();
             String format = mapper
