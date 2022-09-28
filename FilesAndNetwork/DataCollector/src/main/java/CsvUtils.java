@@ -5,7 +5,7 @@ import java.util.List;
 
 public class CsvUtils {
 
-    public static String pathJsonAndCsv = "archive/data/data/";
+    public static final String pathJsonAndCsv = "archive/data/data/";
 
     public static String getCsvFileFromAllFolders() {
         StringBuilder builder = new StringBuilder();

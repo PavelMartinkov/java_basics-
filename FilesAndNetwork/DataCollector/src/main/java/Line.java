@@ -9,13 +9,16 @@ public class Line {
 
     public String number;
     public String name;
-    public static List<Station> station = new ArrayList<>();
-
-    private static String pathHtml = "data/code.html";
+    private static final String pathHtml = "data/code.html";
+    public List<Line> lines = new ArrayList<>();
 
     public Line(String number, String name) {
         this.number = number;
         this.name = name;
+    }
+
+    public Line() {
+
     }
 
     public String getNumber() {
@@ -26,18 +29,19 @@ public class Line {
         return name;
     }
 
-    public List<Station> getStation() {
-        return station;
-    }
-
     public static List<Line> getLinesFromHtml() {
         String htmlFile = Main.parseFile(pathHtml);
         Document doc = Jsoup.parse(htmlFile);
         List<Line> linesName = new ArrayList<>();
         Elements lines = doc.select(".js-metro-line");
         lines.forEach(line -> {
-            linesName.add(new Line(line.attr("data-line="),line.text()));
+            linesName.add(new Line(line.attr("data-line="), line.text()));
         });
         return linesName;
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }
