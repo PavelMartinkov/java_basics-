@@ -8,16 +8,25 @@ import java.io.PrintWriter;
 import java.nio.file.FileVisitOption;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public class JsonUtils {
 
     public static final String pathJsonAndCsv = "archive/data/data/";
     public static final String pathStationsJson = "data/stations.json";
     public static final String pathMapJson = "data/map.json";
+
+    public Station station;
+    public Line line;
+
+    public JsonUtils (Station station, Line line) {
+        this.station = station;
+        this.line = line;
+    }
+
+    public JsonUtils() {
+
+    }
 
     public static String getJsonFileFromAllFolders() {
         StringBuilder builder = new StringBuilder();
@@ -45,26 +54,26 @@ public class JsonUtils {
 
     public static String createMapJson() {
         try {
-            Line line = new Line();
-            Station station = new Station();
 
             PrintWriter writer = new PrintWriter(pathMapJson);
 
-            JSONArray array = new JSONArray();
-
-            LinkedHashMap<List, List> item = new LinkedHashMap<>();
-            item.put(Line.getLinesFromHtml(),Station.getStationsFromHtml());
-
-            for (int i = 0; i < line.lines.size(); i++) {
-                for (int j = 0; j < station.stations.size(); j++) {
-                    if(station.stations.get(j).getLine().equals(line.lines.get(i).getNumber())) {
-                        array.add(station.stations.get(j).getName());
-                    }
-//                    if (line.lines.get(i).getName().equals(station.stations.get(j).getLine())) {
-//                        array.add(line.lines.get(i).getName());
-//                    }
+            LinkedHashMap<Line, List> item = new LinkedHashMap<>();
+            for (int i = 0; i < Line.getLinesFromHtml().size(); i++) {
+                JSONArray array = new JSONArray();
+//                array.add(station.getName());
+                for (int j = 0; j < Station.getStationsFromHtml().size(); j++) {
+                    item.put(Line.getLinesFromHtml().get(i),array);
+                    break;
                 }
             }
+
+//            for (int i = 0; i < line.lines.size(); i++) {
+//                for (int j = 0; j < station.stations.size(); j++) {
+//                    if(station.stations.get(j).getLine().equals(line.lines.get(i).getNumber())) {
+//                        array.add(station.stations.get(j).getName());
+//                    }
+//                }
+//            }
 
 
             JSONObject json = new JSONObject();

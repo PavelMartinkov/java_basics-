@@ -8,12 +8,12 @@ import java.util.List;
 public class Station {
 
     public String name;
-    public Line line;
+    public List<Line> line;
     private static String pathHtml = "data/code.html";
-    public List<Station> stations = new ArrayList<>();
 
-    public Station(String name) {
+    public Station(String name, List<Line> line) {
         this.name = name;
+        this.line = line;
     }
 
     public Station() {
@@ -23,7 +23,7 @@ public class Station {
         return name;
     }
 
-    public Line getLine() {
+    public List<Line> getLine() {
         return line;
     }
 
@@ -33,14 +33,13 @@ public class Station {
         List<Station> stationsName = new ArrayList<>();
         Elements stations = doc.select(".js-metro-stations");
         stations.forEach(element -> {
-            stationsName.add(new Station(element.attr("data-line=") + element.text()));
+            stationsName.add(new Station(element.attr("data-line") + " " + element.text(), Line.getLinesFromHtml()));
         });
         return stationsName;
     }
 
     @Override
     public String toString() {
-        return name;
+        return '\n' + name;
     }
-
 }

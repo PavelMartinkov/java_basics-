@@ -39,6 +39,8 @@ public class Main {
                 System.out.println(JsonUtils.createStationsJson());
                 System.out.println("Файл создан в папке data/stations.json");
             } else if (input == 6) {
+//                JsonUtils jsonUtils = new JsonUtils();
+//                jsonUtils.createMapJson();
                 System.out.println(JsonUtils.createMapJson());
                 System.out.println("Файл создан в папке data/map.json");
             } else {
@@ -46,8 +48,6 @@ public class Main {
                 continue;
             }
         }
-
-//        JsonUtils.parseJsonFile();
     }
 }
 

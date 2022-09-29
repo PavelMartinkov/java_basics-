@@ -10,7 +10,6 @@ public class Line {
     public String number;
     public String name;
     private static final String pathHtml = "data/code.html";
-    public List<Line> lines = new ArrayList<>();
 
     public Line(String number, String name) {
         this.number = number;
@@ -18,7 +17,6 @@ public class Line {
     }
 
     public Line() {
-
     }
 
     public String getNumber() {
@@ -35,13 +33,13 @@ public class Line {
         List<Line> linesName = new ArrayList<>();
         Elements lines = doc.select(".js-metro-line");
         lines.forEach(line -> {
-            linesName.add(new Line(line.attr("data-line="), line.text()));
+            linesName.add(new Line(line.attr("data-line"), " " + line.text()));
         });
         return linesName;
     }
 
     @Override
     public String toString() {
-        return name;
+        return number + name;
     }
 }
