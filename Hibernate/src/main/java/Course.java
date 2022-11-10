@@ -1,12 +1,14 @@
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "Courses")
 public class Course {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     private String name;
 
@@ -18,16 +20,19 @@ public class Course {
 
     private String description;
 
-    @Column(name = "teacher_id")
-    private int teacherId;
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Teacher teacher;
 
     @Column(name = "students_count")
-    private int studentsCount;
+    private Integer studentsCount;
 
     private int price;
 
     @Column(name = "price_per_hour")
-    private float PricePerHour;
+    private float pricePerHour;
+
+    @OneToMany(mappedBy = "course", cascade = CascadeType.ALL)
+    private List<Subscription> subscriptions;
 
     public int getId() {
         return id;
@@ -69,12 +74,12 @@ public class Course {
         this.description = description;
     }
 
-    public int getTeacherId() {
-        return teacherId;
+    public Teacher getTeacher() {
+        return teacher;
     }
 
-    public void setTeacherId(int teacherId) {
-        this.teacherId = teacherId;
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
     }
 
     public int getStudentsCount() {
@@ -94,10 +99,18 @@ public class Course {
     }
 
     public float getPricePerHour() {
-        return PricePerHour;
+        return pricePerHour;
     }
 
     public void setPricePerHour(float pricePerHour) {
-        PricePerHour = pricePerHour;
+        this.pricePerHour = pricePerHour;
+    }
+
+    public List<Subscription> getSubscriptions() {
+        return subscriptions;
+    }
+
+    public void setSubscriptions(List<Subscription> subscriptions) {
+        this.subscriptions = subscriptions;
     }
 }
