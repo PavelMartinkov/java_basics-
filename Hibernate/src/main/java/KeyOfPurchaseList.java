@@ -10,7 +10,7 @@ public class KeyOfPurchaseList implements Serializable {
     public KeyOfPurchaseList() {
     }
 
-    public KeyOfPurchaseList (String studentName, String courseName) {
+    public KeyOfPurchaseList(String studentName, String courseName) {
         this.studentName = studentName;
         this.courseName = courseName;
     }

@@ -5,12 +5,12 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Embeddable
-public class Key implements Serializable {
+public class KeyOfSubscription implements Serializable {
 
-    public Key() {
+    public KeyOfSubscription() {
     }
 
-    public Key(int studentId, int courseId) {
+    public KeyOfSubscription(int studentId, int courseId) {
         this.studentId = studentId;
         this.courseId = courseId;
     }
@@ -41,7 +41,7 @@ public class Key implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Key key = (Key) o;
+        KeyOfSubscription key = (KeyOfSubscription) o;
         return studentId == key.studentId && courseId == key.courseId;
     }
 

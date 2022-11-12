@@ -1,6 +1,7 @@
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -16,7 +17,7 @@ public class Student {
     private int age;
 
     @Column(name = "registration_date", nullable = true)
-    private LocalDate registrationDate;
+    private Date registrationDate;
 
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
     private List<Subscription> subscriptions;
@@ -45,11 +46,11 @@ public class Student {
         this.age = age;
     }
 
-    public LocalDate getRegistrationDate() {
+    public Date getRegistrationDate() {
         return registrationDate;
     }
 
-    public void setRegistrationDate(LocalDate registrationDate) {
+    public void setRegistrationDate(Date registrationDate) {
         this.registrationDate = registrationDate;
     }
 

@@ -7,7 +7,7 @@ import java.util.Date;
 public class Subscription {
 
     @EmbeddedId
-    private Key id;
+    private KeyOfSubscription id;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "student_id", updatable = false, insertable = false)
@@ -24,11 +24,11 @@ public class Subscription {
         return subscriptionDate;
     }
 
-    public Key getId() {
+    public KeyOfSubscription getId() {
         return id;
     }
 
-    public void setId(Key id) {
+    public void setId(KeyOfSubscription id) {
         this.id = id;
     }
 
