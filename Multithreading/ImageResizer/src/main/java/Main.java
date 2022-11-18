@@ -21,27 +21,14 @@ public class Main {
         long start = System.currentTimeMillis();
 
         File[] files = srcDir.listFiles();
-        int middle = files.length / 4;
+        int middle = files.length / cores;
 
-        File[] files1 = new File[middle];
-        System.arraycopy(files, 0, files1, 0, files1.length);
-        ImageResizer resizer1 = new ImageResizer(files1, newWidth, dstFolder, start);
-        resizer1.start();
-
-        File[] files2 = new File[middle];
-        System.arraycopy(files, middle, files2, 0, files2.length);
-        ImageResizer resizer2 = new ImageResizer(files2, newWidth, dstFolder, start);
-        resizer2.start();
-
-        File[] files3 = new File[middle];
-        System.arraycopy(files, middle * 2, files3, 0, files3.length);
-        ImageResizer resizer3 = new ImageResizer(files3, newWidth, dstFolder, start);
-        resizer3.start();
-
-        File[] files4 = new File[middle];
-        System.arraycopy(files, middle * 3, files4, 0, files4.length);
-        ImageResizer resizer4 = new ImageResizer(files4, newWidth, dstFolder, start);
-        resizer4.start();
+        for (int i = 0; i < cores; i++) {
+            File[] file = new File[middle];
+            System.arraycopy(files, middle * i, file, 0, file.length);
+            ImageResizer resizer = new ImageResizer(file, newWidth, dstFolder, start);
+            resizer.start();
+        }
 
         System.out.println();
 
