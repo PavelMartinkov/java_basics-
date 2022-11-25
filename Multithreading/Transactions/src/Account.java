@@ -3,6 +3,11 @@ public class Account {
     private long money;
     private String accNumber;
 
+    public Account(String accNumber, long money) {
+        this.accNumber = accNumber;
+        this.money = money;
+    }
+
     public long getMoney() {
         return money;
     }
@@ -17,5 +22,10 @@ public class Account {
 
     public void setAccNumber(String accNumber) {
         this.accNumber = accNumber;
+    }
+
+    @Override
+    public String toString() {
+        return  "Номер счета: " + accNumber + " Остаток на счету: " + money + " рублей";
     }
 }
