@@ -1,6 +1,7 @@
 public class Account {
 
     private long money;
+
     private String accNumber;
 
     public Account(String accNumber, long money) {
@@ -26,6 +27,6 @@ public class Account {
 
     @Override
     public String toString() {
-        return  "Номер счета: " + accNumber + " Остаток на счету: " + money + " рублей";
+        return "Номер счета: " + accNumber + " Остаток на счету: " + money + " рублей";
     }
 }
