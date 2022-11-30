@@ -4,6 +4,8 @@ public class Account {
 
     private String accNumber;
 
+    private boolean isBlocked = false;
+
     public Account(String accNumber, long money) {
         this.accNumber = accNumber;
         this.money = money;
@@ -23,6 +25,14 @@ public class Account {
 
     public void setAccNumber(String accNumber) {
         this.accNumber = accNumber;
+    }
+
+    public boolean isBlocked() {
+        return isBlocked;
+    }
+
+    public void setBlocked(boolean blocked) {
+        isBlocked = blocked;
     }
 
     @Override

@@ -12,12 +12,12 @@ public class Main {
         bank.getSumAllAccounts();
         System.out.println();
 
-        for (int i = 0; i <= 2; i++) {
+        for (int i = 0; i <= 100; i++) {
             Thread thread = new Thread(new Runnable() {
                 @Override
                 public void run() {
                     try {
-                        Thread.sleep(1000);
+                        Thread.sleep(2000);
                         bank.transfer("BY1", "BY2", 10000);
                         bank.transfer("BY3", "BY4", 50001);
                         bank.transfer("BY5", "BY6", 50000);

@@ -14,34 +14,30 @@ public class Bank {
         return random.nextBoolean();
     }
 
-    /**
-     * TODO: реализовать метод. Метод переводит деньги между счетами. Если сумма транзакции > 50000,
-     * то после совершения транзакции, она отправляется на проверку Службе Безопасности – вызывается
-     * метод isFraud. Если возвращается true, то делается блокировка счетов (как – на ваше
-     * усмотрение)
-     */
-
     public void transfer(String fromAccountNum, String toAccountNum, long amount) throws InterruptedException {
-
-        if (getBalance(fromAccountNum) > amount) {
-            synchronized (accounts.get(fromAccountNum)) {
-                synchronized (accounts.get(toAccountNum)) {
+        synchronized (accounts.get(fromAccountNum)) {
+            synchronized (accounts.get(toAccountNum)) {
+                if (!accounts.get(fromAccountNum).isBlocked() && !accounts.get(toAccountNum).isBlocked()) {
+                    if (amount > 50000) {
+                        if (isFraud(fromAccountNum, toAccountNum, amount)) {
+                            blockedAcc(fromAccountNum);
+                            blockedAcc(toAccountNum);
+                            System.out.println("Вы перевели со счета №: " + fromAccountNum + " на счет №: " + toAccountNum +
+                                    " сумму превышающую " + 50000 + " рублей" + " , поэтому дальнейшие операции по этим счетам - невозможны (оба счета заблокированы)" + System.lineSeparator());
+                            return;
+                        }
+                    }
+                    if (accounts.get(fromAccountNum).getMoney() < amount) {
+                        System.out.println("На счете № " + fromAccountNum + " - недостаточно средств, невозможно выполнить операцию" + System.lineSeparator());
+                        return;
+                    }
                     accounts.get(fromAccountNum).setMoney(accounts.get(fromAccountNum).getMoney() - amount);
                     accounts.get(toAccountNum).setMoney(accounts.get(toAccountNum).getMoney() + amount);
+                    System.out.println("Операция со счетами " + fromAccountNum + ", " + toAccountNum + " выполнена успешно" + System.lineSeparator() +
+                            "Остаток на счету №: " + fromAccountNum + " равен " + getBalance(fromAccountNum) + System.lineSeparator() +
+                            "Остаток на счету №: " + toAccountNum + " равен " + getBalance(toAccountNum) + System.lineSeparator());
                 }
             }
-            System.out.println("Операция со счетами " + fromAccountNum + ", " + toAccountNum + " выполнена успешно" + System.lineSeparator() +
-                    "Остаток на счету №: " + fromAccountNum + " равен " + getBalance(fromAccountNum) + System.lineSeparator() +
-                    "Остаток на счету №: " + toAccountNum + " равен " + getBalance(toAccountNum) + System.lineSeparator());
-            if (amount > 50000) {
-                isFraud(fromAccountNum, toAccountNum, amount);
-                System.out.println("Вы перевели со счета №: " + fromAccountNum + " на счет №: " + toAccountNum +
-                        " сумму превышающую " + 50000 + " рублей" + " , поэтому дальнейшие операции по этим счетам - невозможны (оба счета заблокированы)" + System.lineSeparator());
-                isBlockedAcc(fromAccountNum);
-                isBlockedAcc(toAccountNum);
-            }
-        } else {
-            System.out.println("На счете № " + fromAccountNum + " - недостаточно средств, невозможно выполнить операцию" + System.lineSeparator());
         }
     }
 
@@ -53,7 +49,7 @@ public class Bank {
         return accounts;
     }
 
-    public synchronized long getBalance(String accountNum) {
+    public long getBalance(String accountNum) {
         return accounts.get(accountNum).getMoney();
     }
 
@@ -66,15 +62,7 @@ public class Bank {
         return atomicLong.get();
     }
 
-//    public Map<String, Account> blockedAcc(String accountNum) {
-//        deletedAcc.put(accountNum, accounts.get(accountNum));
-//        accounts.remove(accountNum);
-//        return deletedAcc;
-//    }
-
-    public boolean isBlockedAcc(String accountNum) {
-        deletedAcc.put(accountNum, accounts.get(accountNum));
-        accounts.remove(accountNum);
-        return true;
+    public void blockedAcc(String accountNum) {
+        accounts.get(accountNum).setBlocked(true);
     }
 }
