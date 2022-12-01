@@ -19,6 +19,7 @@ public class Main {
                     try {
                         Thread.sleep(2000);
                         bank.transfer("BY1", "BY2", 10000);
+                        bank.transfer("BY2", "BY1", 10000);
                         bank.transfer("BY3", "BY4", 50001);
                         bank.transfer("BY5", "BY6", 50000);
                     } catch (InterruptedException e) {
