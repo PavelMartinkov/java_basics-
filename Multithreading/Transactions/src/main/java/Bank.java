@@ -15,7 +15,8 @@ public class Bank {
     public void transfer(String fromAccountNum, String toAccountNum, long amount) throws InterruptedException {
         synchronized (accounts.get(fromAccountNum).compareTo(accounts.get(toAccountNum)) > 0 ?
                         accounts.get(toAccountNum) : accounts.get(fromAccountNum)) {
-//            synchronized (accounts.get(toAccountNum)) {
+            synchronized (accounts.get(fromAccountNum).compareTo(accounts.get(toAccountNum)) > 0 ?
+                    accounts.get(fromAccountNum) : accounts.get(toAccountNum)) {
                 if (!accounts.get(fromAccountNum).isBlocked() && !accounts.get(toAccountNum).isBlocked()) {
                     if (amount > 50000) {
                         if (isFraud(fromAccountNum, toAccountNum, amount)) {
@@ -36,7 +37,7 @@ public class Bank {
                             "Остаток на счету №: " + fromAccountNum + " равен " + getBalance(fromAccountNum) + System.lineSeparator() +
                             "Остаток на счету №: " + toAccountNum + " равен " + getBalance(toAccountNum) + System.lineSeparator());
                 }
-//            }
+            }
         }
     }
 
