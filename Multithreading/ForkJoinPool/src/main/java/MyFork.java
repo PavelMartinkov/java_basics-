@@ -3,52 +3,68 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.io.PrintWriter;
 import java.util.HashSet;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.RecursiveTask;
 
-public class MyFork extends RecursiveTask<HashSet<MyFork>> {
+public class MyFork extends RecursiveTask<HashSet<String>> {
 
     private String urlSite;
-    private String urlParent;
-    private HashSet<String> linksSet = new HashSet<>();
+    private static Set<String> linksSet = ConcurrentHashMap.newKeySet();
 
-    private static final String PATH_LINKS = "data/links.txt";
-
-    public MyFork(String urlSite, String parentUrl) {
+    public MyFork(String urlSite) {
         this.urlSite = urlSite;
-        this.urlParent = parentUrl;
+    }
+
+    public String getUrlSite() {
+        return urlSite;
+    }
+
+    public void setUrlSite(String urlSite) {
+        this.urlSite = urlSite;
+    }
+
+    public Set<String> getLinksSet() {
+        return linksSet;
+    }
+
+    public void setLinksSet(Set<String> linksSet) {
+        this.linksSet = linksSet;
     }
 
     @Override
-    protected HashSet<MyFork> compute() {
+    protected HashSet<String> compute() {
         HashSet<MyFork> uniqueLinks = new HashSet<>();
+        HashSet<String> stringLink = new HashSet<>();
         try {
-            PrintWriter writer = new PrintWriter(PATH_LINKS);
             Thread.sleep(150);
-            Document document = Jsoup.connect(urlSite).ignoreHttpErrors(true).get();
+            Document document = Jsoup.connect(urlSite).get();
             Elements elements = document.select("a[href]");
-            if (!elements.isEmpty()) {
-                for (Element element : elements) {
-                    String link = element.attr("abs:href");
-                    if (!link.contains("#") && !linksSet.contains(link) && link.contains(urlParent)) {
-                        linksSet.add(link);
-                        System.out.println(link);
-//                        writer.write(link);
-                    } else {
-                        MyFork myFork = new MyFork(urlSite, urlParent);
+            for (Element element : elements) {
+                String link = element.attr("abs:href");
+                if (link.endsWith(".pdf") || link.endsWith(".jpg") || link.endsWith(".png")) {
+                    continue;
+                }
+                if (!link.contains("#") && !linksSet.contains(link) && link.contains(urlSite)) {
+                    linksSet.add(link);
+                    System.out.println(link);
+                } else {
+                    if (!link.contains("tel:") && link.startsWith("http://skillbox.ru") || link.startsWith("https://skillbox.ru")) {
+                        MyFork myFork = new MyFork(link);
                         myFork.fork();
                         uniqueLinks.add(myFork);
-                        writer.write(link);
-                        myFork.join();
                     }
                 }
             }
-            writer.flush();
-            writer.close();
+            for (MyFork myFork : uniqueLinks) {
+                stringLink.addAll(myFork.join());
+            }
+//            uniqueLinks.forEach(ForkJoinTask::join);
         } catch (Exception ex) {
-            ex.printStackTrace();
+//            ex.printStackTrace();
+            System.out.println(ex.getMessage());
         }
-        return uniqueLinks;
+        return stringLink;
     }
 }
