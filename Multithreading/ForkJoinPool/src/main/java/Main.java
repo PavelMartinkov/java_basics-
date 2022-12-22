@@ -1,7 +1,9 @@
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
-import java.util.HashSet;
+import java.util.Set;
 import java.util.concurrent.ForkJoinPool;
 
 public class Main {
@@ -14,14 +16,13 @@ public class Main {
 
         System.out.println("Начало парсинга: " + new Date());
         PrintWriter writer = new PrintWriter(PATH_LINKS);
-        HashSet<String> urls = new ForkJoinPool().invoke(new MyFork(URL_ADDRESS));
+        Set<String> urls = new ForkJoinPool().invoke(new MyFork(URL_ADDRESS));
         for (String links : urls) {
-            writer.write(links);
+            writer.write(links + System.lineSeparator());
         }
         writer.flush();
         writer.close();
-//        ForkJoinPool pool = new ForkJoinPool();
-//        pool.invoke(new MyFork(URL_ADDRESS));
+
         System.out.println("Конец парсинга: " + new Date());
     }
 }
