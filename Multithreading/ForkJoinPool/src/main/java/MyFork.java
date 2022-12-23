@@ -30,12 +30,33 @@ public class MyFork extends RecursiveTask<Set<String>> {
                     continue;
                 }
                 if (!link.contains("#") && !linksSet.contains(link) && !link.contains("tel:")
-                        && link.startsWith("https://skillbox.ru")) {
-                    linksSet.add(link);
-                    System.out.println(link);
-                    MyFork myFork = new MyFork(link);
-                    myFork.fork();
-                    uniqueLinks.add(myFork);
+                        && link.startsWith("https://skillbox.ru/")) {
+                    String[] url = link.split("/");
+                    if (url.length == 4) {
+                        linksSet.add('\t' + link);
+                        System.out.println('\t' + link);
+                        MyFork myFork = new MyFork('\t' + link);
+                        myFork.fork();
+                        uniqueLinks.add(myFork);
+                    } else if (url.length == 5) {
+                        linksSet.add("\t\t" + link);
+                        System.out.println("\t\t" + link);
+                        MyFork myFork = new MyFork("\t\t" + link);
+                        myFork.fork();
+                        uniqueLinks.add(myFork);
+                    } else if (url.length == 6) {
+                        linksSet.add("\t\t\t" + link);
+                        System.out.println("\t\t\t" + link);
+                        MyFork myFork = new MyFork("\t\t\t" + link);
+                        myFork.fork();
+                        uniqueLinks.add(myFork);
+                    } else {
+                        linksSet.add(link);
+                        System.out.println(link);
+                        MyFork myFork = new MyFork(link);
+                        myFork.fork();
+                        uniqueLinks.add(myFork);
+                    }
                 }
             }
             for (MyFork myFork : uniqueLinks) {
