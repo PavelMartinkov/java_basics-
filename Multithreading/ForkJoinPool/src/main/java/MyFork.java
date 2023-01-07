@@ -13,7 +13,6 @@ public class MyFork extends RecursiveTask<Set<String>> {
     private static Set<String> linksSet = ConcurrentHashMap.newKeySet();
     private static Set<MyFork> uniqueLinks = ConcurrentHashMap.newKeySet();
 
-
     public MyFork(String urlSite) {
         this.urlSite = urlSite;
     }
@@ -29,38 +28,15 @@ public class MyFork extends RecursiveTask<Set<String>> {
                 if (link.endsWith(".pdf") || link.endsWith(".jpg") || link.endsWith(".png")) {
                     continue;
                 }
-                if (!link.contains("#") && !linksSet.contains(link) && !link.contains("tel:")
-                        && link.startsWith("https://skillbox.ru/")) {
-                    String[] url = link.split("/");
-                    if (url.length == 4) {
-                        linksSet.add('\t' + link);
-                        System.out.println('\t' + link);
-                        MyFork myFork = new MyFork('\t' + link);
-                        myFork.fork();
-                        uniqueLinks.add(myFork);
-                    } else if (url.length == 5) {
-                        linksSet.add("\t\t" + link);
-                        System.out.println("\t\t" + link);
-                        MyFork myFork = new MyFork("\t\t" + link);
-                        myFork.fork();
-                        uniqueLinks.add(myFork);
-                    } else if (url.length == 6) {
-                        linksSet.add("\t\t\t" + link);
-                        System.out.println("\t\t\t" + link);
-                        MyFork myFork = new MyFork("\t\t\t" + link);
-                        myFork.fork();
-                        uniqueLinks.add(myFork);
-                    } else {
-                        linksSet.add(link);
-                        System.out.println(link);
-                        MyFork myFork = new MyFork(link);
-                        myFork.fork();
-                        uniqueLinks.add(myFork);
-                    }
+                if (!link.contains("#") && !link.contains("?") && !link.contains("&") && !link.contains("tel:") &&
+                        link.startsWith("https://skillbox.ru/") && !linksSet.contains(link)) {
+                    linksSet.add(link);
+                    System.out.println(link);
+                    MyFork myFork = new MyFork(link);
+                    myFork.fork();
+                    uniqueLinks.add(myFork);
+                    linksSet.addAll(myFork.join());
                 }
-            }
-            for (MyFork myFork : uniqueLinks) {
-                linksSet.addAll(myFork.join());
             }
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
