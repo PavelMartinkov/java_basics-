@@ -15,26 +15,23 @@ public class Main {
         PrintWriter writer = new PrintWriter(PATH_LINKS);
         Set<String> urls = new ForkJoinPool().invoke(new MyFork(URL_ADDRESS));
         for (String links : urls) {
-            String oneTab = "\t";
-            String twoTab = "\t\t";
-            String threeTab = "\t\t\t";
-            String fourTab = "\t\t\t\t";
-            long count = links.chars().filter(ch -> ch == '/').count();
-            if (count == 4) {
-                writer.write(oneTab + links + System.lineSeparator());
-            } else if (count == 5) {
-                writer.write(twoTab + links + System.lineSeparator());
-            } else if (count == 6) {
-                writer.write(threeTab + links + System.lineSeparator());
-            } else if (count == 7) {
-                writer.write(fourTab + links + System.lineSeparator());
-            } else {
-                writer.write(links + System.lineSeparator());
-            }
+            writer.write(addTab(links) + System.lineSeparator());
         }
         writer.flush();
         writer.close();
-
         System.out.println("Конец парсинга: " + new Date());
+    }
+
+    private static String addTab(String url) {
+        String https = "https://";
+        String[] links = (url.substring(url.indexOf(https) + 1)).split("/");
+        long partsLinks = links.length - 3;
+        char tab = '\t';
+        StringBuilder builder = new StringBuilder(url);
+        for (int i = 0; i < partsLinks; i++) {
+            builder.insert(0, tab);
+        }
+        url = builder.toString();
+        return url;
     }
 }

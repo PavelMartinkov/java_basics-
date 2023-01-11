@@ -27,7 +27,7 @@ https://skillbox.ru/
 		https://skillbox.ru/course/architects-rights/
 		https://skillbox.ru/course/art-management/
 		https://skillbox.ru/course/astronomy-and-space/
-	https://skillbox.ru/course/autocad
+		https://skillbox.ru/course/autocad
 		https://skillbox.ru/course/autocad/
 		https://skillbox.ru/course/autodesk-maya/
 		https://skillbox.ru/course/autotesting-for-business/
@@ -97,10 +97,10 @@ https://skillbox.ru/
 		https://skillbox.ru/course/educational-methodist-new-2/
 		https://skillbox.ru/course/educational-methodist-new/
 		https://skillbox.ru/course/educational-methodist/
-	https://skillbox.ru/course/electronic-music
+		https://skillbox.ru/course/electronic-music
 		https://skillbox.ru/course/electronic-music-production/
 		https://skillbox.ru/course/electronic-music/
-	https://skillbox.ru/course/elementary-music-theory
+		https://skillbox.ru/course/elementary-music-theory
 		https://skillbox.ru/course/elementary-music-theory/
 		https://skillbox.ru/course/end-to-end-analytics/
 		https://skillbox.ru/course/english-for-marketers/
@@ -111,7 +111,7 @@ https://skillbox.ru/
 		https://skillbox.ru/course/excel-gsheets/
 		https://skillbox.ru/course/fashion-designer/
 		https://skillbox.ru/course/figma-null-pro/
-	https://skillbox.ru/course/film-editor
+		https://skillbox.ru/course/film-editor
 		https://skillbox.ru/course/film-editor-base/
 		https://skillbox.ru/course/film-editor-pro/
 		https://skillbox.ru/course/film-editor/
@@ -128,7 +128,7 @@ https://skillbox.ru/
 		https://skillbox.ru/course/frontend-developer/
 		https://skillbox.ru/course/frontend-dpo/
 		https://skillbox.ru/course/frontend-pro-dpo/
-	https://skillbox.ru/course/frontend-pro-expert
+		https://skillbox.ru/course/frontend-pro-expert
 		https://skillbox.ru/course/frontend-pro-expert/
 		https://skillbox.ru/course/frontend-pro/
 		https://skillbox.ru/course/furniture-design/
@@ -138,7 +138,7 @@ https://skillbox.ru/
 		https://skillbox.ru/course/graphic-design/
 		https://skillbox.ru/course/head/
 		https://skillbox.ru/course/head_of_education/
-	https://skillbox.ru/course/healthy-self-esteem
+		https://skillbox.ru/course/healthy-self-esteem
 		https://skillbox.ru/course/healthy-self-esteem/
 		https://skillbox.ru/course/houdini/
 		https://skillbox.ru/course/house-construction-management/
@@ -165,7 +165,7 @@ https://skillbox.ru/
 		https://skillbox.ru/course/java/
 		https://skillbox.ru/course/javascript/
 		https://skillbox.ru/course/kespa/
-	https://skillbox.ru/course/landscape-design
+		https://skillbox.ru/course/landscape-design
 		https://skillbox.ru/course/landscape-design/
 		https://skillbox.ru/course/linux-os-administration/
 		https://skillbox.ru/course/logodesign/
@@ -199,7 +199,7 @@ https://skillbox.ru/
 		https://skillbox.ru/course/paket-basics-of-entrepreneurship/
 		https://skillbox.ru/course/paket-data-analyst-0-junior/
 		https://skillbox.ru/course/paket-promotion-in-tiktok/
-	https://skillbox.ru/course/paket-tester-basics
+		https://skillbox.ru/course/paket-tester-basics
 		https://skillbox.ru/course/paket-tester-basics/
 		https://skillbox.ru/course/paratype/
 		https://skillbox.ru/course/partner-relations-long/
@@ -221,7 +221,7 @@ https://skillbox.ru/
 		https://skillbox.ru/course/powerpoint-gslides/
 		https://skillbox.ru/course/presentation-master/
 		https://skillbox.ru/course/prmanager/
-	https://skillbox.ru/course/producer-commercial
+		https://skillbox.ru/course/producer-commercial
 		https://skillbox.ru/course/producer-commercial/
 		https://skillbox.ru/course/producer-of-musical-projects/
 		https://skillbox.ru/course/producer/
@@ -237,7 +237,7 @@ https://skillbox.ru/
 		https://skillbox.ru/course/profession-3d-visualizer/
 		https://skillbox.ru/course/profession-accountant-customtariffs/
 		https://skillbox.ru/course/profession-accountant/
-	https://skillbox.ru/course/profession-android-developer-2021
+		https://skillbox.ru/course/profession-android-developer-2021
 		https://skillbox.ru/course/profession-android-developer-2021/
 		https://skillbox.ru/course/profession-android-developer-dpo/
 		https://skillbox.ru/course/profession-art-manager/
@@ -262,11 +262,11 @@ https://skillbox.ru/
 		https://skillbox.ru/course/profession-copywriter-zero-pro/
 		https://skillbox.ru/course/profession-cross-platform-mobile-developer/
 		https://skillbox.ru/course/profession-cybersecurity/
-	https://skillbox.ru/course/profession-data-analyst
+		https://skillbox.ru/course/profession-data-analyst
 		https://skillbox.ru/course/profession-data-analyst/
 		https://skillbox.ru/course/profession-data-scientist/
 		https://skillbox.ru/course/profession-decorator/
-	https://skillbox.ru/course/profession-designer-interior
+		https://skillbox.ru/course/profession-designer-interior
 		https://skillbox.ru/course/profession-designer-interior-landscape/
 		https://skillbox.ru/course/profession-designer-interior/
 		https://skillbox.ru/course/profession-developer/
@@ -281,7 +281,7 @@ https://skillbox.ru/
 		https://skillbox.ru/course/profession-eventmanager/
 		https://skillbox.ru/course/profession-fashion-design/
 		https://skillbox.ru/course/profession-fashion-stylist/
-	https://skillbox.ru/course/profession-film-director
+		https://skillbox.ru/course/profession-film-director
 		https://skillbox.ru/course/profession-film-director/
 		https://skillbox.ru/course/profession-finance-manager/
 		https://skillbox.ru/course/profession-fullstack-designer/
@@ -291,7 +291,7 @@ https://skillbox.ru/
 		https://skillbox.ru/course/profession-game-design/
 		https://skillbox.ru/course/profession-gamedesigner/
 		https://skillbox.ru/course/profession-godev/
-	https://skillbox.ru/course/profession-graphdesigner
+		https://skillbox.ru/course/profession-graphdesigner
 		https://skillbox.ru/course/profession-graphdesigner-dpo/
 		https://skillbox.ru/course/profession-graphdesigner/
 		https://skillbox.ru/course/profession-human-resources/
@@ -300,14 +300,14 @@ https://skillbox.ru/
 		https://skillbox.ru/course/profession-investment-analyst/
 		https://skillbox.ru/course/profession-ios-developer-2021-dpo/
 		https://skillbox.ru/course/profession-ios-developer-2021/
-	https://skillbox.ru/course/profession-java
+		https://skillbox.ru/course/profession-java
 		https://skillbox.ru/course/profession-java-dpo/
 		https://skillbox.ru/course/profession-java/
 		https://skillbox.ru/course/profession-jewel-3d-modeller/
 		https://skillbox.ru/course/profession-landscape-design/
 		https://skillbox.ru/course/profession-machine-learning/
 		https://skillbox.ru/course/profession-marketing-director/
-	https://skillbox.ru/course/profession-marketolog-analitik
+		https://skillbox.ru/course/profession-marketolog-analitik
 		https://skillbox.ru/course/profession-marketolog-analitik/
 		https://skillbox.ru/course/profession-marketolog/
 		https://skillbox.ru/course/profession-marketplace-manager/
@@ -324,7 +324,7 @@ https://skillbox.ru/
 		https://skillbox.ru/course/profession-producer-online-courses/
 		https://skillbox.ru/course/profession-product-manager-pro/
 		https://skillbox.ru/course/profession-project-manager-pro/
-	https://skillbox.ru/course/profession-python
+		https://skillbox.ru/course/profession-python
 		https://skillbox.ru/course/profession-python-dpo/
 		https://skillbox.ru/course/profession-python/
 		https://skillbox.ru/course/profession-restaurant-manager/
@@ -337,11 +337,11 @@ https://skillbox.ru/
 		https://skillbox.ru/course/profession-sound-designer/
 		https://skillbox.ru/course/profession-sound-engineer/
 		https://skillbox.ru/course/profession-target/
-	https://skillbox.ru/course/profession-test
+		https://skillbox.ru/course/profession-test
 		https://skillbox.ru/course/profession-test/
 		https://skillbox.ru/course/profession-ue4/
 		https://skillbox.ru/course/profession-unity-middle/
-	https://skillbox.ru/course/profession-ux
+		https://skillbox.ru/course/profession-ux
 		https://skillbox.ru/course/profession-ux-designit/
 		https://skillbox.ru/course/profession-ux/
 		https://skillbox.ru/course/profession-videoproducer/
@@ -368,7 +368,7 @@ https://skillbox.ru/
 		https://skillbox.ru/course/requirements-engineering-in-mechanical-engineering/
 		https://skillbox.ru/course/restaurant-manager/
 		https://skillbox.ru/course/revit-for-interior-designers/
-	https://skillbox.ru/course/sales-on-wildberries
+		https://skillbox.ru/course/sales-on-wildberries
 		https://skillbox.ru/course/sales-on-wildberries/
 		https://skillbox.ru/course/script-for-tvseries/
 		https://skillbox.ru/course/seo-specialist-pro/
@@ -416,7 +416,7 @@ https://skillbox.ru/
 		https://skillbox.ru/course/zbrush/
 	https://skillbox.ru/courses/
 		https://skillbox.ru/courses/aktualnoe-2022/
-	https://skillbox.ru/courses/code
+		https://skillbox.ru/courses/code
 	https://skillbox.ru/design/
 	https://skillbox.ru/engineering/
 	https://skillbox.ru/english/
@@ -424,7 +424,7 @@ https://skillbox.ru/
 	https://skillbox.ru/general-development/
 	https://skillbox.ru/jobs/
 		https://skillbox.ru/lectoriy/records/
-		https://skillbox.ru/local/ajax/getArticlesIndex.php
+			https://skillbox.ru/local/ajax/getArticlesIndex.php
 	https://skillbox.ru/management/
 	https://skillbox.ru/marketing/
 	https://skillbox.ru/media/
@@ -452,7 +452,6 @@ https://skillbox.ru/
 			https://skillbox.ru/media/base/kak-uluchshit-kod-na-python-priyemy-refaktoringa/
 			https://skillbox.ru/media/base/kak_ustanovit_redis_v_os_windows_bez_ispolzovaniya_docker/
 			https://skillbox.ru/media/base/klyuchevoe-slovo-var-v-java/
-			https://skillbox.ru/media/base/kto-takie-kontragenty-zachem-ikh-proveryat-i-pochemu-nelzya-platit-im-bolshe-100-tysyach/
 			https://skillbox.ru/media/base/metaforicheskie-karty/
 			https://skillbox.ru/media/base/obedinenie-strok-v-python/
 			https://skillbox.ru/media/base/shablon-dekorator-supersila-klassovobyertok/
@@ -471,7 +470,6 @@ https://skillbox.ru/
 			https://skillbox.ru/media/business/chelovek-pauk-ne-pomozhet-sdat-ekzamen-o-tom-kak-ne-stoit-obmanyvat-proktoring/
 			https://skillbox.ru/media/business/chto-budet-s-kreditami-i-kak-zhit-bez-swift-otvechaem-na-volnuyushchie-voprosy/
 			https://skillbox.ru/media/business/chto-delat-s-rublyami-otvechayut-eksperty/
-			https://skillbox.ru/media/business/chto-iskusstvennyy-intellekt-mozhet-sdelat-uzhe-segodnya/
 			https://skillbox.ru/media/business/chto-mogut-sdelat-chinovniki-ssha-s-google-i-facebook/
 			https://skillbox.ru/media/business/chto-takoe-tsifrovaya-gramotnost-i-pochemu-ona-vam-nuzhna/
 			https://skillbox.ru/media/business/chto-zhdyet-rossiyskiy-edtech-prognoz-na-2022-god/
@@ -513,7 +511,6 @@ https://skillbox.ru/
 			https://skillbox.ru/media/business/kak-podgotovitsya-k-dollaru-po-100/
 			https://skillbox.ru/media/business/kak-roskomnadzor-boretsya-s-sotssetyami/
 			https://skillbox.ru/media/business/kak-tsifrovizatsiya-menyaet-rynok-zhkkh/
-			https://skillbox.ru/media/business/kak-zashchitit-biznes-ot-terrora-v-seti/
 			https://skillbox.ru/media/business/kitayskie-edtechkompanii-perestraivayut-svoi-biznesmodeli/
 			https://skillbox.ru/media/business/kladbishche-startapov-kakie-rossiyskie-i-zarubezhnye-kompanii-zakrylis-v-2021-godu/
 			https://skillbox.ru/media/business/krupnye-kompanii-menyayut-yurisdiktsiyu/
@@ -552,8 +549,7 @@ https://skillbox.ru/
 			https://skillbox.ru/media/business/sotsseti-znayut-o-vas-vsye-test-a-chto-ob-etom-znaete-vy/
 			https://skillbox.ru/media/business/spasut-li-novye-lgoty-rossiyskuyu-itotrasl/
 			https://skillbox.ru/media/business/spros-na-kursy-edtechplatform-upal-na-tret/
-		https://skillbox.ru/media/business/story-ekaterina-lomova
-			https://skillbox.ru/media/business/tekhnika-bezopasnosti-pri-rabote-s-okrashennymi-dengami/
+			https://skillbox.ru/media/business/story-ekaterina-lomova
 			https://skillbox.ru/media/business/test-kak-edtech-shturmuet-birzhi-vo-vremya-pandemii/
 			https://skillbox.ru/media/business/top5-edtechstartapov-poluchivshikh-bolshe-vsego-investitsiy-v-mae/
 			https://skillbox.ru/media/business/top5-mirovykh-edtechstartapov-iyunya/
@@ -809,7 +805,7 @@ https://skillbox.ru/
 			https://skillbox.ru/media/code/kak_adaptirovat_sayt_pod_raznye_razresheniya/
 			https://skillbox.ru/media/code/kak_dobavit_javascript/
 			https://skillbox.ru/media/code/kak_dobavit_v_prilozhenie_podderzhku_neskolkikh_yazykov/
-			https://skillbox.ru/media/code/kak_izuchit_data_science_po_nastoyashchemu_a_ne_razvlekatsya_tryukami/%5C
+				https://skillbox.ru/media/code/kak_izuchit_data_science_po_nastoyashchemu_a_ne_razvlekatsya_tryukami/%5C
 			https://skillbox.ru/media/code/kak_nachat_programmirovat_na_php/
 			https://skillbox.ru/media/code/kak_nachat_programmirovat_na_python/
 			https://skillbox.ru/media/code/kak_nachat_programmirovat_na_python_ekspress_gayd/
@@ -1314,7 +1310,7 @@ https://skillbox.ru/
 			https://skillbox.ru/media/design/chto_takoe_skevomorfizm/
 			https://skillbox.ru/media/design/chto_takoe_tipografika/
 			https://skillbox.ru/media/design/chto_takoe_tsvetovoy_krug_ittena/
-		https://skillbox.ru/media/design/chto_takoe_tsvetovye_modeli_i_kakimi_oni_byvayut
+			https://skillbox.ru/media/design/chto_takoe_tsvetovye_modeli_i_kakimi_oni_byvayut
 			https://skillbox.ru/media/design/chto_takoe_tsvetovye_modeli_i_kakimi_oni_byvayut/
 			https://skillbox.ru/media/design/chto_umeet_adobe_photoshop_podrobno_o_vozmozhnostyakh_programmy/
 			https://skillbox.ru/media/design/chto_vybrat_dizayneru_fiks_ili_chas/
@@ -1391,7 +1387,7 @@ https://skillbox.ru/
 			https://skillbox.ru/media/design/figma-plugins-pattrns/
 			https://skillbox.ru/media/design/figma-plugins-ui-ux/
 			https://skillbox.ru/media/design/figma-prototypes-1/
-		https://skillbox.ru/media/design/figma-prototypes-2
+			https://skillbox.ru/media/design/figma-prototypes-2
 			https://skillbox.ru/media/design/figma-prototypes-2/
 			https://skillbox.ru/media/design/figma-prototypes-3/
 			https://skillbox.ru/media/design/figma-prototypes-plugins/
@@ -1453,7 +1449,7 @@ https://skillbox.ru/
 			https://skillbox.ru/media/design/interview-yuri-gordon/
 			https://skillbox.ru/media/design/interview_elena_popova/
 			https://skillbox.ru/media/design/interview_nikita_prilepskiy/
-		https://skillbox.ru/media/design/iskusstvo-tsveta
+			https://skillbox.ru/media/design/iskusstvo-tsveta
 			https://skillbox.ru/media/design/iskusstvo-tsveta/
 			https://skillbox.ru/media/design/istoriya-dizayna-1910-1920e-gody/
 			https://skillbox.ru/media/design/istoriya-dizayna-1930-1940/
@@ -1518,6 +1514,7 @@ https://skillbox.ru/
 			https://skillbox.ru/media/design/kovorkingi-v-peterburge-10-luchshikh-mest/
 			https://skillbox.ru/media/design/kto-byl-pervym-graficheskim-dizaynerom/
 			https://skillbox.ru/media/design/kto_takie_ui_dizaynery_i_chem_oni_zanimayutsya/
+			https://skillbox.ru/media/design/kto_takoy_art_direktor/
 			https://skillbox.ru/media/design/kto_takoy_dizayner_dekorator/
 			https://skillbox.ru/media/design/kto_takoy_landshaftnyy_dizayner/
 			https://skillbox.ru/media/design/kurs-na-ekologichnost-i-drugie-trendy-v-dizayne-upakovki/
@@ -2505,7 +2502,7 @@ https://skillbox.ru/
 			https://skillbox.ru/media/education/pravitelstvo-utverdilo-pravila-predostavleniya-grantov-peredovym-inzhenernym-shkolam/
 			https://skillbox.ru/media/education/pravitelstvo-utverdilo-proekty-dlya-tsifrovoy-transformatsii-nauki-i-vysshego-obrazovaniya/
 			https://skillbox.ru/media/education/pravitelstvo-vydelilo-pochti-5-mlrd-rubley-na-provedenie-kapitalnogo-remonta-v-pedvuzakh/
-		https://skillbox.ru/media/education/pravitelstvo_razrabotalo_proekt_polozheniya_o_prosvetitelskoy_deyatelnosti
+			https://skillbox.ru/media/education/pravitelstvo_razrabotalo_proekt_polozheniya_o_prosvetitelskoy_deyatelnosti
 			https://skillbox.ru/media/education/pravitelstvo_razrabotalo_proekt_polozheniya_o_prosvetitelskoy_deyatelnosti/
 			https://skillbox.ru/media/education/predstavitelyam-vuzov-rasskazali-ob-ekspertize-ran-v-ramkakh-programmy-prioritet2030/
 			https://skillbox.ru/media/education/predstavlena-obnovlyennaya-interaktivnaya-karta-kachestva-shkolnogo-obrazovaniya/
@@ -3143,7 +3140,7 @@ https://skillbox.ru/
 			https://skillbox.ru/media/growth/chto-meshaet-nam-zhit-razbiraemsya-vmeste-s-psikhologami/
 			https://skillbox.ru/media/growth/chto-takoe-abyuz-prostymi-slovami-i-na-primerakh/
 			https://skillbox.ru/media/growth/chto-takoe-bodipozitiv/
-		https://skillbox.ru/media/growth/chto-takoe-bulling-v-shkole-u-vzroslykh-v-sotssetyakh
+			https://skillbox.ru/media/growth/chto-takoe-bulling-v-shkole-u-vzroslykh-v-sotssetyakh
 			https://skillbox.ru/media/growth/chto-takoe-bulling-v-shkole-u-vzroslykh-v-sotssetyakh/
 			https://skillbox.ru/media/growth/chto-takoe-emotsionalnyy-intellekt-i-kak-ego-razvit/
 			https://skillbox.ru/media/growth/chto-takoe-empatiya-i-kak-eye-razvivat/
@@ -3163,8 +3160,9 @@ https://skillbox.ru/
 			https://skillbox.ru/media/growth/chuvstvo-viny-eto-agressiya-napravlennaya-na-samogo-sebya/
 			https://skillbox.ru/media/growth/cognitive-behavioral-therapy/
 			https://skillbox.ru/media/growth/dazhe-ne-staraetsya-kak-vernut-motivatsiyu-rebyenka-k-obucheniyu/
-		https://skillbox.ru/media/growth/deystvuyte-iz-lyubvi-k-sebe-intervyu-pro-artterapiyu-meditatsii-i-zhiznennyy-balans
+			https://skillbox.ru/media/growth/deystvuyte-iz-lyubvi-k-sebe-intervyu-pro-artterapiyu-meditatsii-i-zhiznennyy-balans
 			https://skillbox.ru/media/growth/emotsii-zashkalivayut-kak-nauchitsya-imi-upravlyat/
+			https://skillbox.ru/media/growth/family-psychotherapy/
 			https://skillbox.ru/media/growth/gestalt-therapy/
 			https://skillbox.ru/media/growth/inache-uydu-k-konkurentam-kak-pravilno-prosit-povysheniya-zarplaty/
 			https://skillbox.ru/media/growth/interview-anastasiya-sazonova/
@@ -3194,7 +3192,7 @@ https://skillbox.ru/
 			https://skillbox.ru/media/growth/kak-pravilnaya-motivatsiya-pomogaet-pobezhdat/
 			https://skillbox.ru/media/growth/kak-pravilno-kritikovat-drugikh-i-sebya-rasskazyvaet-psikholog/
 			https://skillbox.ru/media/growth/kak-prinyat-svoye-telo-i-povysit-samootsenku/
-		https://skillbox.ru/media/growth/kak-proyti-sobesedovanie-i-poluchit-rabotu-mechty-samoe-podrobnoe-rukovodstvo
+			https://skillbox.ru/media/growth/kak-proyti-sobesedovanie-i-poluchit-rabotu-mechty-samoe-podrobnoe-rukovodstvo
 			https://skillbox.ru/media/growth/kak-proyti-sobesedovanie-i-poluchit-rabotu-mechty-samoe-podrobnoe-rukovodstvo/
 			https://skillbox.ru/media/growth/kak-sdelat-tak-chtoby-podrostok-byl-idealnym/
 			https://skillbox.ru/media/growth/kak-vybrat-professiyu-i-smenit-rabotu/
@@ -3210,6 +3208,7 @@ https://skillbox.ru/
 			https://skillbox.ru/media/growth/peregruzki-kak-u-kosmonavtov-kak-prokhodit-adaptatsiya-pervoklassnika-k-shkole/
 			https://skillbox.ru/media/growth/proforientatsiya-chto-eto-takoe-i-kak-ona-pomogaet-vzroslym/
 			https://skillbox.ru/media/growth/proforientatsiya-dlya-vzroslykh-kak-nayti-prizvanie/
+			https://skillbox.ru/media/growth/psychoanalysis/
 			https://skillbox.ru/media/growth/rezyume-i-soprovoditelnoe-pismo-kak-sostavit-i-oformit/
 			https://skillbox.ru/media/growth/samobichevanie-chto-eto-takoe-i-kak-perestat-im-zanimatsya/
 			https://skillbox.ru/media/growth/sdelayu-zavtra-chto-takoe-sindrom-otlozhennoy-zhizni-i-kak-ot-nego-izbavitsya/
@@ -3261,7 +3260,6 @@ https://skillbox.ru/
 			https://skillbox.ru/media/management/chto_takoe_kontseptsiya_jobs_to_be_done/
 			https://skillbox.ru/media/management/chto_takoe_produktovye_metriki_i_zachem_oni_nuzhny/
 			https://skillbox.ru/media/management/chto_takoe_upravlenie_proektami/
-			https://skillbox.ru/media/management/dashbord_chto_eto_i_zachem_nuzhno/
 			https://skillbox.ru/media/management/etichnyy-gayd-dlya-rukovoditeley/
 			https://skillbox.ru/media/management/gayd_po_professii_menedzher_proektov/
 			https://skillbox.ru/media/management/gde_iskat_ekspertov_esli_oni_srochno_nuzhny/
@@ -3396,7 +3394,6 @@ https://skillbox.ru/
 			https://skillbox.ru/media/marketing/budushchee-videokontenta-otchyet-youtube/
 			https://skillbox.ru/media/marketing/chem_opasny_bitye_ssylki_na_sayte/
 			https://skillbox.ru/media/marketing/chto-marketologu-nuzhno-znat-o-serm/
-			https://skillbox.ru/media/marketing/chto-takoe-kvizmarketing-i-kak-on-pomogaet-nakhodit-klientov/
 			https://skillbox.ru/media/marketing/chto_takoe_antikrizisnyy_orm_i_pochemu_on_prishel_na_smenu_obychnomu_serm/
 			https://skillbox.ru/media/marketing/chto_takoe_arbitrazh_trafika_i_deystvitelno_li_na_nyem_zarabatyvayut/
 			https://skillbox.ru/media/marketing/chto_takoe_crm_sistema/
@@ -3416,7 +3413,6 @@ https://skillbox.ru/
 			https://skillbox.ru/media/marketing/chto_takoe_znaki_yandeksa/
 			https://skillbox.ru/media/marketing/dlya_chego_nuzhno_seo/
 			https://skillbox.ru/media/marketing/effektivnaya-reklama-v-yandeksdzene/
-			https://skillbox.ru/media/marketing/ekspluatatsiya_lgbt_povestki_mirovymi_brendami_eto_printsipy_ili_prodazhi/
 			https://skillbox.ru/media/marketing/gayd-chatboty/
 			https://skillbox.ru/media/marketing/gayd-po-yandeksvordstatu-kak-podbirat-klyuchevye-slova-dlya-reklamy-seo-i-kontenta/
 			https://skillbox.ru/media/marketing/gde_i_kak_nayti_tsa/
