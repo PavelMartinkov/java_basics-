@@ -36,24 +36,16 @@ public class RedisStorage {
         }
     }
 
-    public void addUsers() {
-            for (int i = 1; i <= 20; i++) {
-                onlineUsers.add(getTs(), String.valueOf(i));
-                out.println("На главной странице показываем пользователя " + i);
+    public void addUsers() throws InterruptedException {
+        for (int i = 1; i <= 20; i++) {
+            onlineUsers.add(getTs(), String.valueOf(i));
+            out.println("На главной странице показываем пользователя " + i);
+            int userRandom = new Random().nextInt(20);
+            if (userRandom == i) {
+                out.println("Пользователь " + userRandom + " оплатил платную услугу");
+                Thread.sleep(1000);
+                break;
             }
-//                long time = System.currentTimeMillis();
-//        while (true) {
-//                onlineUsers.removeRangeByScore(0, true, getTs() - time, true);
-//                String user = onlineUsers.first();
-//                String user = onlineUsers.pollFirst(time, TimeUnit.SECONDS)
-//            }
-    }
-
-    public void randomPayment() throws InterruptedException {
-        int userRandom = new Random().nextInt(20);
-        if (userRandom != 0) {
-            Thread.sleep(1000);
-            out.println("Пользователь " + userRandom + " оплатил платную услугу");
         }
     }
 

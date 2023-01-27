@@ -38,10 +38,9 @@ public class RedisTest {
         for(int seconds=0; seconds <= 10; seconds++) {
             // Выполним 500 запросов
             for(int request = 0; request <= RPS; request++) {
-//                int user_id = new Random().nextInt(USERS);
-//                redis.logPageVisit(user_id);
+                int user_id = new Random().nextInt(USERS);
+                redis.logPageVisit(user_id);
                 redis.addUsers();
-                redis.randomPayment();
                 Thread.sleep(SLEEP);
             }
             redis.deleteOldEntries(DELETE_SECONDS_AGO);
