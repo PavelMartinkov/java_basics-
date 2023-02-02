@@ -12,7 +12,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="8f250" class="javax.swing.JButton" binding="checkInformationCollapse">
+          <component id="8f250" class="javax.swing.JButton" binding="buttonCollapse">
             <constraints/>
             <properties>
               <text value="Collapse"/>
