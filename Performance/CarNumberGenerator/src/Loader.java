@@ -2,7 +2,7 @@ import java.io.PrintWriter;
 
 public class Loader extends Thread {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         int cores = Runtime.getRuntime().availableProcessors();
         System.out.println("Количество ядер: " + cores + System.lineSeparator());
 
@@ -14,7 +14,7 @@ public class Loader extends Thread {
                         long start = System.currentTimeMillis();
 
                         char[] letters = {'У', 'К', 'Е', 'Н', 'Х', 'В', 'А', 'Р', 'О', 'С', 'М', 'Т'};
-                        for (int regionCode = 1; regionCode <= 10; regionCode++) {
+                        for (int regionCode = 1; regionCode <= 4; regionCode++) {
                             PrintWriter writer = new PrintWriter("res/numbers" + regionCode + ".txt");
                             StringBuilder builder = new StringBuilder();
                             for (int number = 1; number < 1000; number++) {
@@ -35,7 +35,6 @@ public class Loader extends Thread {
                             writer.flush();
                             writer.close();
                         }
-
                         System.out.println("Parsing time for: " + Thread.currentThread().getName() + " - " + (System.currentTimeMillis() - start) + " ms");
                     } catch (Exception e) {
                         e.printStackTrace();
