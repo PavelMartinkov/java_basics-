@@ -3,19 +3,19 @@ import java.io.PrintWriter;
 public class Loader extends Thread {
 
     public static void main(String[] args) {
-        int cores = Runtime.getRuntime().availableProcessors();
-        System.out.println("Количество ядер: " + cores + System.lineSeparator());
 
-        for (int i = 1; i <= cores; i++) {
+        for (int i = 1; i <= 2; i++) {
             Thread thread = new Thread(new Runnable() {
                 @Override
                 public void run() {
                     try {
                         long start = System.currentTimeMillis();
 
+                        PrintWriter writer1 = new PrintWriter("res/numbers1.txt");
+                        PrintWriter writer2 = new PrintWriter("res/numbers2.txt");
+
                         char[] letters = {'У', 'К', 'Е', 'Н', 'Х', 'В', 'А', 'Р', 'О', 'С', 'М', 'Т'};
-                        for (int regionCode = 1; regionCode <= 4; regionCode++) {
-                            PrintWriter writer = new PrintWriter("res/numbers" + regionCode + ".txt");
+                        for (int regionCode = 1; regionCode <= 100; regionCode++) {
                             StringBuilder builder = new StringBuilder();
                             for (int number = 1; number < 1000; number++) {
                                 for (char firstLetter : letters) {
@@ -31,10 +31,17 @@ public class Loader extends Thread {
                                     }
                                 }
                             }
-                            writer.write(builder.substring(0, builder.length()));
-                            writer.flush();
-                            writer.close();
+                            if (regionCode <= 50) {
+                                writer1.write(builder.toString());
+                            } else {
+                                writer2.write(builder.toString());
+                            }
                         }
+                        writer1.flush();
+                        writer2.flush();
+                        writer1.close();
+                        writer2.close();
+
                         System.out.println("Parsing time for: " + Thread.currentThread().getName() + " - " + (System.currentTimeMillis() - start) + " ms");
                     } catch (Exception e) {
                         e.printStackTrace();
